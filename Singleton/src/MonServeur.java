@@ -9,34 +9,40 @@
  * @author tpedrero
  */
 public class MonServeur {
+
+    
     
     private ServiceA serviceA;
     private ServiceB serviceB;
-    private MonServeur instance = new MonServeur( serviceA, serviceB);
     
+    private static final MonServeur instance = new MonServeur( );
     
-    private MonServeur(ServiceA sA, ServiceB sB){
-        this.serviceA = sA;
-        this.serviceB = sB;
+    private MonServeur(){
+        serviceA = new ServiceA();
+        serviceB = new ServiceB();
+    }
+    
+    public static MonServeur getInstance() {
+        return instance;
     }
     
     protected void defaultPrint(String m){
-        return "defaultPrint "+ m + "\n";
+        System.out.println("defaultPrint " + m + "\n");
     }
     
     public void publicPrint(String m){
-        return "publicPrint "+ m + "\n";
+        System.out.println("publicPrint " + m + "\n");
     }
     
     public ServiceAInterface getServiceAInterface(){
-        return ;
+        return getServiceA();
     }
     
     public ServiceBInterface getServiceBInterface(){
-        return ;
+        return serviceB;
     }
     
-    public ServiceA getServicdeA(){
+    public ServiceA getServiceA(){
         return serviceA;
     }
     

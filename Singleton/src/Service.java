@@ -10,6 +10,6 @@
  */
 public class Service {
     public Service(){
-        
+        super();
     }
 }

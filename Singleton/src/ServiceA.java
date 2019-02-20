@@ -16,10 +16,10 @@ public class ServiceA extends Service implements ServiceAInterface{
     }
     
     public void methodeA(){
-        System.out.println("A");
+       MonServeur.getInstance().defaultPrint("A");
     }
     
     public void methodeB(){
-        System.out.println("B");
+        MonServeur.getInstance().publicPrint("B");
     }
 }

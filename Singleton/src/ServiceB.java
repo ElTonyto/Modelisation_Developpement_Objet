@@ -14,21 +14,21 @@ public class ServiceB extends Service implements ServiceBInterface{
     }
     
     public void methodeC(){
-        System.out.println("C");
+        MonServeur.getInstance().defaultPrint("C");
     }
     
     @Override
     public void methodeD(){
-        System.out.println("D");
+        MonServeur.getInstance().publicPrint("D");
     }
     
     @Override
     public void methodeE(){
-        //
+        MonServeur.getInstance().getServiceAInterface().methodeA();
     }
     
     @Override
     public void methodeF(){
-        //
+        MonServeur.getInstance().getServiceA().methodeB();
     }
 }

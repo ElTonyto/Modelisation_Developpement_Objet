@@ -27,11 +27,11 @@ public class MonServeur {
     }
     
     protected void defaultPrint(String m){
-        System.out.println("defaultPrint " + m + "\n");
+        System.out.println("defaultPrint : " + m);
     }
     
     public void publicPrint(String m){
-        System.out.println("publicPrint " + m + "\n");
+        System.out.println("publicPrint : " + m);
     }
     
     public ServiceAInterface getServiceAInterface(){
@@ -45,5 +45,4 @@ public class MonServeur {
     public ServiceA getServiceA(){
         return serviceA;
     }
-    
 }

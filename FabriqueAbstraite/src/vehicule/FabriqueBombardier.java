@@ -11,6 +11,7 @@ import vehicule.bombardier.avion.Global8000;
 import vehicule.bombardier.motoneige.SkiDooExpeditionSport;
 import vehicule.bombardier.motoneige.SkiDooRenegade;
 import vehicule.Avion;
+import vehicule.Motoneige;
 
 /**
  *
@@ -32,19 +33,21 @@ public class FabriqueBombardier implements FabriqueVehicule{
     
     @Override
     public Motoneige createMotoneige(String modele) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     
     }
 
     @Override
     public Avion createAvion(String modele) {
         try{
-        Avion avion = new (Avion)mesAvions.get(modele);
-        
+            
+        Avion avion = new (Avion) mesAvions.get(modele);
         return avion;
+                
         }
         catch{
             
         }
+        return null;
     }
     
 }

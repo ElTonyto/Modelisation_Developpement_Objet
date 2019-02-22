@@ -5,19 +5,23 @@
  */
 package directeur;
 
+import constructeur.ConstructeurContrat;
+import constructeur.Contrat;
+
 /**
  *
  * @author tpedrero
  */
 public class Vendeur {
     
-    protected ContructeurContrat constructeur;
+    protected ConstructeurContrat constructeur;
     
     public Vendeur( ConstructeurContrat constructeur){
         
     }
     
     public Contrat construit( String nomClient){
+        return null;
         
     }
     

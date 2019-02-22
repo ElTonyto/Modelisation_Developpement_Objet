@@ -5,6 +5,7 @@
  */
 package monteurdirecteur;
 
+import constructeur.ConstructeurContrat;
 import java.util.Scanner;
 
 /**

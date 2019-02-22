@@ -33,21 +33,21 @@ public class FabriqueBombardier implements FabriqueVehicule{
     
     @Override
     public Motoneige createMotoneige(String modele) {
+        
+        Motoneige m = new Motoneige(0, 0);
+        String msg = "un esprit maléfique est passé par ici. Qui est - ce ? Est-il passé ailleurs??? Le mystere reste entier...";
+        System.out.println(msg);
+        return null;
      
     }
 
     @Override
     public Avion createAvion(String modele) {
-        try{
-            
-        Avion avion = new (Avion) mesAvions.get(modele);
-        return avion;
-                
-        }
-        catch{
-            
-        }
+        
+        Avion a = new Avion(0, 0, 0);
+        
         return null;
+        
     }
     
 }

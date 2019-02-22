@@ -22,7 +22,7 @@ public class FabriqueAirbus implements FabriqueVehicule{
     HashMap<String, Class> mesMotos = new HashMap<>();
     
     
-    public FabriqueBombardier() {
+    public FabriqueAirbus() {
         mesAvions.put("CRJ1000", CRJ1000.class);
         mesAvions.put("GLOBAL8000", Global8000.class);
     

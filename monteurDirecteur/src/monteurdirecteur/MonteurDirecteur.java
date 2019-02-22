@@ -5,6 +5,8 @@
  */
 package monteurdirecteur;
 
+import java.util.Scanner;
+
 /**
  *
  * @author tpedrero
@@ -15,7 +17,9 @@ public class MonteurDirecteur {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner reader =new Scanner(System.in);
+        ConstructeurContrat constructeurContrat;
+        
     }
     
 }

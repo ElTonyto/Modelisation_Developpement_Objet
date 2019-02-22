@@ -5,6 +5,7 @@
  */
 package vehicule;
 
+import com.sun.xml.internal.ws.resources.ModelerMessages;
 import java.util.HashMap;
 import vehicule.airbus.avion.A220_300;
 import vehicule.bombardier.avion.CRJ1000;
@@ -37,7 +38,7 @@ public class FabriqueAirbus implements FabriqueVehicule{
 
     @Override
     public Avion createAvion(String modele) {
-        Avion avion = new A220_300();
+        Avion avion = new 
         return avion;
     }
 }

@@ -9,6 +9,19 @@ package constructeur;
  *
  * @author tpedrero
  */
-public class ConstructeurContratPdf {
+public class ConstructeurContratPdf extends ConstructeurContrat {
+ 
+    public ConstructeurContratPdf(){
+        
+    }
     
+    @Override
+    public void construitBonDeCommande(String nomClient){
+        
+    }
+    
+    @Override
+    public void construitDemandeImmatriculation(String nomDemandeur){
+        
+    }
 }

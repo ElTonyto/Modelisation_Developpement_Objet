@@ -11,4 +11,14 @@ package directeur;
  */
 public class Vendeur {
     
+    protected ContructeurContrat constructeur;
+    
+    public Vendeur( ConstructeurContrat constructeur){
+        
+    }
+    
+    public Contrat construit( String nomClient){
+        
+    }
+    
 }

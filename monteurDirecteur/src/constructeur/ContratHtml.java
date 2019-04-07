@@ -12,13 +12,10 @@ package constructeur;
 public class ContratHtml extends Contrat{
     
     @Override
-    public void ajouteDocument(String document){
-        
-    }
-    
-    @Override
     public void imprime(){
-        
+        for( String document : documents){
+            System.out.println("<HTML>"+document+"<HTML>");
+        }
     }
     
 }

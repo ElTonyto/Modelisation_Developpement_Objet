@@ -9,20 +9,19 @@ package constructeur;
  *
  * @author tpedrero
  */
-public class ConstructeurContrat {
+public abstract class ConstructeurContrat {
     
     protected Contrat contrat;
     
-    public void  construitBonDeCommande(String nomClient){
-        
+    public void construitBonDeCommande(String nomClient){
+        contrat.ajouteDocument("Bon de commande Client : " + nomClient);
     }
     
     public void construitDemandeImmatriculation(String nomDemandeur){
-        
+        contrat.ajouteDocument("Demande d'immatriculation Demandeur : " + nomDemandeur);  
     }
     
     public Contrat resultat(){
-        return null;
-        
+        return contrat;
     }
 }

@@ -12,16 +12,7 @@ package constructeur;
 public class ConstructeurContratPdf extends ConstructeurContrat {
  
     public ConstructeurContratPdf(){
-        
+        contrat = new ContratPdf();
     }
-    
-    @Override
-    public void construitBonDeCommande(String nomClient){
-        
-    }
-    
-    @Override
-    public void construitDemandeImmatriculation(String nomDemandeur){
-        
-    }
+   
 }

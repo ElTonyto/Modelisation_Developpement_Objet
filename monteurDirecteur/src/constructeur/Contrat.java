@@ -11,18 +11,16 @@ import java.util.ArrayList;
  *
  * @author tpedrero
  */
-public class Contrat {
-    protected ArrayList<String> document;
+public abstract class Contrat {
+    protected ArrayList<String> documents;
     
     public Contrat(){
-        
+        documents = new ArrayList<>();
     }
     
     public void ajouteDocument(String document){
-        
+        this.documents.add(document);
     }
     
-    public void imprime(){
-        
-    }
+    public abstract void imprime();
 }

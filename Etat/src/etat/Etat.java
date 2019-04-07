@@ -15,6 +15,6 @@ public interface Etat {
     
     public void afficherCommande();
     
-    public void envoyerCommande( int commande);
+    public Etat envoyerCommande( int commande);
     
 }

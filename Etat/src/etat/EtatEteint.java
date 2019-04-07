@@ -12,16 +12,22 @@ package etat;
 public class EtatEteint implements Etat{
     @Override
     public void afficherInfo(){
-        
+        System.out.println("-----------------------\n"
+                + "ETAT ACTUEL : ETEINT\n" 
+                + "-----------------------\n");
     }
     
     @Override
     public void afficherCommande(){
-        
+        System.out.println("Commandes" + "\n" +
+                "    0 - Démarrer le PC" );
     }
     
     @Override
-    public void envoyerCommande( int commande){
-        
+    public Etat envoyerCommande( int commande){
+        if(commande == 0){
+            return new EtatDemarrage();
+        }
+        return this;
     }
 }

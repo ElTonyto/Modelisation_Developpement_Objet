@@ -9,19 +9,29 @@ package etat;
  *
  * @author tpedrero
  */
-public class EtatDemarrage implements Etat {
-    @Override
+public class EtatDemarrage implements Etat{
     public void afficherInfo(){
-        
+        System.out.println("-----------------------\n"
+                + "ETAT ACTUEL : DEMARRAGE\n" 
+                + "-----------------------\n");
     }
     
-    @Override
     public void afficherCommande(){
-        
+        System.out.println("Commandes" + "\n" 
+                + "    0 - Eteindre le PC \n" 
+                + "    1 - CTRL+ALT+SUPPR \n");
     }
     
     @Override
-    public void envoyerCommande( int commande){
-        
+    public Etat envoyerCommande( int commande){
+         switch (commande) {
+            case 0:
+                return new EtatEteint();
+            case 1:
+                return new EtatAuthentification();
+            default:
+                break;
+        }
+        return this;
     }
 }

@@ -12,16 +12,23 @@ package etat;
 public class EtatFermeture implements Etat{
     @Override
     public void afficherInfo(){
-        
+        System.out.println("-----------------------\n"
+                + "ETAT ACTUEL : FERMETURE\n" 
+                + "-----------------------\n");
     }
     
     @Override
     public void afficherCommande(){
-        
+        System.out.println("Commandes" + "\n" 
+                + "    0 - Eteindre le PC \n");
     }
     
     @Override
-    public void envoyerCommande( int commande){
+    public Etat envoyerCommande( int commande){
+        if( commande == 0){
+            return new EtatEteint();
+        }
+        return this;
         
     }
 }

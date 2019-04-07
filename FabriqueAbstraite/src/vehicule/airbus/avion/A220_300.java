@@ -14,11 +14,11 @@ import vehicule.Avion;
 public class A220_300 extends Avion{
 
     public A220_300() {
-        super(0, 0, 0);
+        super(160, 0.82, 6112);
     }
     
     @Override
     public void afficherPublicite() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("A220_300, un avion gros mais pas trop \n");
     }
 }

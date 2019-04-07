@@ -14,11 +14,11 @@ import vehicule.Avion;
 public class Global8000 extends Avion {
 
     public Global8000() {
-        super(0, 0, 0);
+        super(17, 0.90, 7900);
     }
-    
+
     @Override
     public void afficherPublicite() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Global8000, globalement le nom est global \n");
     }
 }

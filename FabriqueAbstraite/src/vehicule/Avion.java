@@ -9,7 +9,7 @@ package vehicule;
  *
  * @author tpedrero
  */
-public class Avion implements Vehicule{
+public abstract class Avion implements Vehicule{
 
     private int passagerMax;
     private double vitesseMaxCroisiere;
@@ -17,18 +17,16 @@ public class Avion implements Vehicule{
     
     public Avion (int passagerMax, double vitesseMaxCroisiere, int distanceFrachissable){
         this.passagerMax = passagerMax;
-        this.vitesseMaxCroisiere = this.vitesseMaxCroisiere;
+        this.vitesseMaxCroisiere = vitesseMaxCroisiere;
         this.distanceFranchissable = distanceFrachissable;
     }
     
     @Override
     public void afficherCaracteristiques() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void afficherPublicite() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println( "Caractéristiques" + "\n"
+                + "Distance:" + this.distanceFranchissable + "\n"
+                + "Passager Max:" + this.passagerMax + "\n" 
+                + "Vitesse: " + this.vitesseMaxCroisiere);
     }
     
 }

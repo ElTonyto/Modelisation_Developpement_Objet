@@ -14,11 +14,11 @@ import vehicule.Avion;
 public class CRJ1000 extends Avion {
 
     public CRJ1000() {
-        super(0, 0, 0);
+        super(104, 0.835, 1650);
     }
     
     @Override
     public void afficherPublicite() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("CRJ1000, cet avion a un nom etrange \n");         
     }
 }

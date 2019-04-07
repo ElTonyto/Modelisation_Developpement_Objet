@@ -6,6 +6,8 @@
 package vehicule;
 
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import vehicule.bombardier.avion.CRJ1000;
 import vehicule.bombardier.avion.Global8000;
 import vehicule.bombardier.motoneige.SkiDooExpeditionSport;
@@ -27,24 +29,38 @@ public class FabriqueBombardier implements FabriqueVehicule{
         mesAvions.put("CRJ1000", CRJ1000.class);
         mesAvions.put("GLOBAL8000", Global8000.class);
     
-        mesMotos.put("SKIDOO_EXPEDITION", SkiDooExpeditionSport.class);
+        mesMotos.put("SKIDOO_EXPEDITION_SPORT", SkiDooExpeditionSport.class);
         mesMotos.put("SKIDOO_RENEGADE", SkiDooRenegade.class);
     }
     
     @Override
     public Motoneige createMotoneige(String modele) {
         
-        Motoneige m = new Motoneige(0, 0);
-        return null;
+        Motoneige motoneige = null;
+        try {
+            motoneige = (Motoneige) mesMotos.get(modele).newInstance();
+        } catch (InstantiationException ex) {
+            Logger.getLogger(FabriqueBombardier.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(FabriqueBombardier.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return motoneige;
      
     }
 
     @Override
     public Avion createAvion(String modele) {
         
-        Avion a = new Avion(0, 0, 0);
-        
-        return null;
+        Avion avion = null;
+        try {
+            avion = (Avion) mesAvions.get(modele).newInstance();
+        } catch (InstantiationException ex) {
+            Logger.getLogger(FabriqueBombardier.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(FabriqueBombardier.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        return avion;
         
     }
     

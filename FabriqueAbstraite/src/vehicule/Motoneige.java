@@ -9,7 +9,7 @@ package vehicule;
  *
  * @author tpedrero
  */
-public class Motoneige implements Vehicule{
+public abstract class Motoneige implements Vehicule{
 
     private int longueurChenille;
     private int PDSF;
@@ -21,11 +21,9 @@ public class Motoneige implements Vehicule{
     
     @Override
     public void afficherCaracteristiques() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Caractéristiques" + "\n"
+            + "Longueur des chenilles: " + this.longueurChenille + "\n"
+            + "Prix de détail: " + this.PDSF);
     }  
 
-    @Override
-    public void afficherPublicite() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

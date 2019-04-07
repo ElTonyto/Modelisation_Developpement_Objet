@@ -14,11 +14,11 @@ import vehicule.Motoneige;
 public class SkiDooRenegade extends Motoneige {
 
     public SkiDooRenegade() {
-        super(0, 0);
+        super(137, 16704);
     }
     
     @Override
     public void afficherPublicite() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("SkiDoo Renegade, une moto renegade");
     }
 }

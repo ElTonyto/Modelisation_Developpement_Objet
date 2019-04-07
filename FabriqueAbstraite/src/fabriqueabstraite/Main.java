@@ -28,6 +28,8 @@ public class Main {
         mesVehicules.add(fabrique.createAvion("A380"));
         mesVehicules.add(fabrique.createAvion("A220_300"));
         
+        
+        
         fabrique = new FabriqueBombardier();
         mesVehicules.add(fabrique.createAvion("CRJ1000"));
         mesVehicules.add(fabrique.createAvion("GLOBAL8000"));
@@ -37,7 +39,7 @@ public class Main {
         for(Vehicule vehicule: mesVehicules){
             vehicule.afficherCaracteristiques();
             vehicule.afficherPublicite();
-            System.err.println();
+            System.out.println();
         }
     }
 }

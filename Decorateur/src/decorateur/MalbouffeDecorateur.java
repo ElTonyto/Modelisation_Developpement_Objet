@@ -22,8 +22,7 @@ public abstract class MalbouffeDecorateur implements Malbouffe{
     }
     
     public String getDescription(){
-        return malbouffe.getDescription() +
-                malbouffe.getDescription();
+        return malbouffe.getDescription();
     }
     
     

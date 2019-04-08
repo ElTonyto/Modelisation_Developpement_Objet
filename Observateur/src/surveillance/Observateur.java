@@ -10,6 +10,5 @@ package surveillance;
  * @author tpedrero
  */
 public interface Observateur {
-
     public void alerter(Evenement evenement);
 }

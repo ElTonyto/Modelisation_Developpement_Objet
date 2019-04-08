@@ -16,7 +16,7 @@ public class Sauce extends MalbouffeDecorateur{
     }
     
     public String getDescription(){
-        return "sauce";
+        return super.getDescription() + " avec de la sauce";
     
 }
     

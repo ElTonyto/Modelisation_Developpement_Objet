@@ -7,20 +7,26 @@ package surveillance.observateur;
 
 import surveillance.Evenement;
 import surveillance.Observateur;
+import surveillance.observable.EspionEvenement;
 
 /**
  *
  * @author tpedrero
  */
 public class Log implements Observateur {
-
+    private final int NOLOG;
+    
     public Log(int noLog) {
-
+        this.NOLOG = noLog;
+        EspionEvenement.observable.ajouterObservateur(this);
     }
 
     @Override
     public void alerter(Evenement evenement) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       if(NOLOG >= 90){
+           System.out.println("LOG : Evènement(" 
+                   + evenement.toString() + ")");
+       }
     }
 
 }

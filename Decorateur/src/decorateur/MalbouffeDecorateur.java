@@ -10,12 +10,7 @@ package decorateur;
  * @author tpedrero
  */
 public abstract class MalbouffeDecorateur implements Malbouffe{
-    private Malbouffe malbouffe = new Malbouffe() {
-        @Override
-        public String getDescription() {
-            return getDescription();
-        }
-    };
+    private Malbouffe malbouffe;
 
     public MalbouffeDecorateur(Malbouffe malbouffe) {
         this.malbouffe = malbouffe;

@@ -7,6 +7,7 @@ package surveillance.observateur;
 
 import surveillance.Evenement;
 import surveillance.Observateur;
+import surveillance.observable.EspionEvenement;
 
 /**
  *
@@ -15,12 +16,12 @@ import surveillance.Observateur;
 public class Rapport implements Observateur{
 
     public Rapport(){
-        
+        EspionEvenement.observable.ajouterObservateur(this);
     }
     
     @Override
     public void alerter(Evenement evenement) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(evenement.toString());
     }
     
 }

@@ -16,24 +16,23 @@ import surveillance.Observateur;
  */
 public class EspionEvenement implements Observable {
 
-    private ArrayList<Observateur> observateurs;
-    private static Observable observable;
+    private ArrayList<Observateur> observateurs = new ArrayList<>();
+    public static Observable observable;
 
     private EspionEvenement() {
-
-    }
-
-    public void alerter(Evenement evenement) {
-
     }
 
     @Override
     public void ajouterObservateur(Observateur observateur) {
-
+        observateurs.add(observateur);
     }
 
     @Override
     public void supprimerObservateur(Observateur observateur) {
-
+        observateurs.remove(observateur);
+    }
+    
+    public Observable getObservable(){
+        return this.observable;
     }
 }

@@ -15,11 +15,21 @@ public class Evenement {
     private String description;
     
     public Evenement(int niveauUrgence, String description){
-        
+        this.description = description;
+        this.niveauUrgence = niveauUrgence;
     }
     
     public String toString(){
-        return null;
+        return "Niveau urgence=" + niveauUrgence 
+                + "description" + description.toString();
         
+    }
+    
+    public int getNiveauUrgence(){
+        return this.niveauUrgence;
+    }
+    
+    public String getDescription(){
+        return this.description;
     }
 }

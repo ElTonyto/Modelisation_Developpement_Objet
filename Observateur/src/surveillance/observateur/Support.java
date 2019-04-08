@@ -7,6 +7,7 @@ package surveillance.observateur;
 
 import surveillance.Evenement;
 import surveillance.Observateur;
+import surveillance.observable.EspionEvenement;
 
 /**
  *
@@ -15,12 +16,14 @@ import surveillance.Observateur;
 public class Support implements Observateur {
 
     public Support(){
-        
+        EspionEvenement.observable.ajouterObservateur(this);
     }
     
     @Override
     public void alerter(Evenement evenement) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(evenement.getNiveauUrgence() >= 90){
+            System.out.println("SUPPROT : " + evenement.toString());
+        }
     }
     
     

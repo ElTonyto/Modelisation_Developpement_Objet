@@ -28,7 +28,7 @@ public class Main {
         malbouffes.add(hotDog);
         malbouffes.add(mcDo);
         
-        malbouffes.add( new Sauce(poutine));
+        malbouffes.add(new Sauce(poutine));
         malbouffes.add(new Sauce(mcDo));
         malbouffes.add(new Ketchup(hotDog));
         malbouffes.add(new Ketchup(mcDo));

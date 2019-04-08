@@ -5,10 +5,12 @@
  */
 package surveillance.observateur;
 
+import surveillance.Evenement;
+
 /**
  *
  * @author tpedrero
  */
 interface Obserateur {
-    
+    public void alerter(Evenement evenement);
 }

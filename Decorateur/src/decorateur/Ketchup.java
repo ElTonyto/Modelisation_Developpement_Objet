@@ -16,7 +16,7 @@ public class Ketchup extends MalbouffeDecorateur{
     }
     
     public String getDescription(){
-        return "ketchup";
+        return super.getDescription() + " avec du ketchup";
     }
     
 }

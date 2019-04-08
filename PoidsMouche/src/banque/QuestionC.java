@@ -11,7 +11,7 @@ package banque;
  */
 public class QuestionC extends Question {
 
-    public QuestionC(String description) {
+    public QuestionC() {
         super("QUESTION C");
     }
 

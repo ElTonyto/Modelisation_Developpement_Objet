@@ -19,7 +19,6 @@ public abstract class Question {
     
     protected String getDescription(){
         return this.description;
-        
     }
     
     public String toString(){

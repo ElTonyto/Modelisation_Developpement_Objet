@@ -29,7 +29,19 @@ public class Controleur {
     }
     
     public void setCommande(Bouton bouton){
-        bouton.
+        switch(bouton){
+                case X:
+                    
+                    break;
+                case Y:
+                    break;
+                case A:
+                    break;
+                case B:
+                    break;
+                default:
+                    break;
+        }
     }
     
     public void jouer(Bouton bouton){

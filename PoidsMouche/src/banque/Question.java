@@ -9,21 +9,20 @@ package banque;
  *
  * @author tpedrero
  */
-public class Question {
+public abstract class Question {
 
     private String description;
 
-    public Question(String description) {
-        
+    public Question(String description){
+        this.description = description;
     }
     
     protected String getDescription(){
-        return null;
+        return this.description;
         
     }
     
     public String toString(){
-        return null;
-        
+        return this.description.toString();
     }
 }

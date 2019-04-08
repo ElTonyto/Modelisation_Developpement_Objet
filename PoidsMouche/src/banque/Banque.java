@@ -13,25 +13,32 @@ import java.util.HashMap;
  */
 public class Banque {
 
-    private HashMap<Question, Integer> questions;
+    private HashMap<Character, Question> questions;
     private static Banque banque = new Banque();
 
     public static Banque getInstance() {
-        return null;
+        return banque;
 
     }
 
     private Banque() {
-
+        
     }
 
     private Question getQuestion(char id) {
-        return null;
+        return questions.get(id);
 
     }
 
-    private Question chargerQuestion(char id) {
-        return null;
-
+    private Question chargerQuestion(char id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        Question question = null;
+        try{
+            Class<Question> classeQuestion = (Class<Question>) Class.forName("banque.Question" + id);
+            question = classeQuestion.newInstance();
+            questions.put(id, question);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return question;
     }
 }

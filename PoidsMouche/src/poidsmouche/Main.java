@@ -35,6 +35,5 @@ public class Main {
 
     private static char genererIdQuestion() {
         return (char) (ThreadLocalRandom.current().nextInt(65, 68));
-
     }
 }

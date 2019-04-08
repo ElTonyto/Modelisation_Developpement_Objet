@@ -16,11 +16,14 @@ public class Evaluation {
     private Question q2;
 
     public Evaluation(int noEvaluation, char idQ1, char idQ2) {
-
+        this.noEvaluation = noEvaluation;
+        //this.q1.toString() = idQ1;
+        //this.q2 = idQ2;
     }
 
     public String toString() {
-        return null;
-
+        return "Evaluation #" + noEvaluation + "\n" 
+                + "q1 Question(" + q1.getDescription() + ") \n"
+                + "q2 Question(" + q2.getDescription() + ") \n";
     }
 }

@@ -16,7 +16,7 @@ import surveillance.Observateur;
  */
 public class EspionEvenement implements Observable {
 
-    private ArrayList<Observateur> observateurs = new ArrayList<>();
+    public ArrayList<Observateur> observateurs = new ArrayList<>();
     public static Observable observable;
 
     private EspionEvenement() {

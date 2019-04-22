@@ -16,23 +16,21 @@ import surveillance.Evenement;
 public class ThreadEvenement extends Thread {
 
     private EspionEvenement espion;
-    private String[] descriptionsEvenement;
-    
-    public ThreadEvenement() {
-        this.descriptionsEvenement = new String[]{
-            "Feu", "Fuite d'eau", "Panne de courant",
-            "Grève", "Bris majeur"
-        };
-    }
+    private static String[] descriptionsEvenement = {"Feu", "Fuite d'eau", "Panne de courant",
+            "Grève", "Bris majeur"};
 
     @Override
     public void run() {
-        try {
-            Thread.sleep(1000);
+        while(true){
             Evenement ev = new Evenement((int) (Math.random() * 100),
-                    descriptionsEvenement[ (int) (Math.random() * descriptionsEvenement.length)] );                  
-        } catch (InterruptedException ex) {
-            Logger.getLogger(ThreadEvenement.class.getName()).log(Level.SEVERE, null, ex);
+                    descriptionsEvenement[ (int) (Math.random() * descriptionsEvenement.length)] );
+            try {
+                Thread.sleep(1000);
+                EspionEvenement.observable.alerter(ev);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ThreadEvenement.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
+        
     }
 }

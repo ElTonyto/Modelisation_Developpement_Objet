@@ -21,7 +21,7 @@ public class Rapport implements Observateur{
     
     @Override
     public void alerter(Evenement evenement) {
-        System.out.println(evenement.toString());
+        System.out.println("RAPPORT : "  + evenement.getDescription());
     }
     
 }

@@ -22,7 +22,7 @@ public class Support implements Observateur {
     @Override
     public void alerter(Evenement evenement) {
         if(evenement.getNiveauUrgence() >= 90){
-            System.out.println("SUPPROT : " + evenement.toString());
+            System.out.println("SUPPORT URGENCE: " + evenement.toString());
         }
     }
     

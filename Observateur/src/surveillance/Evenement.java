@@ -20,8 +20,9 @@ public class Evenement {
     }
     
     public String toString(){
-        return "Niveau urgence=" + niveauUrgence 
-                + "description" + description.toString();
+        
+        return " niveauUrgence=" + niveauUrgence
+                + " description='" + description.toString() + "'";
         
     }
     

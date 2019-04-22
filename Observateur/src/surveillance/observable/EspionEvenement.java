@@ -17,11 +17,17 @@ import surveillance.Observateur;
 public class EspionEvenement implements Observable {
 
     public ArrayList<Observateur> observateurs = new ArrayList<>();
-    public static Observable observable;
+    public static EspionEvenement observable = new EspionEvenement();
 
     private EspionEvenement() {
     }
 
+    public void alerter(Evenement ev){
+        for( Observateur observateur : observateurs){
+            observateur.alerter(ev);
+        }
+    }
+    
     @Override
     public void ajouterObservateur(Observateur observateur) {
         observateurs.add(observateur);
@@ -30,9 +36,5 @@ public class EspionEvenement implements Observable {
     @Override
     public void supprimerObservateur(Observateur observateur) {
         observateurs.remove(observateur);
-    }
-    
-    public Observable getObservable(){
-        return this.observable;
     }
 }

@@ -6,6 +6,7 @@
 package surveillance;
 
 import surveillance.observable.EspionEvenement;
+import surveillance.observable.ThreadEvenement;
 import surveillance.observateur.GenerateurBillet;
 import surveillance.observateur.Log;
 import surveillance.observateur.Rapport;
@@ -22,9 +23,11 @@ public class Main {
      */
     public static void main(String[] args) throws InterruptedException {
         
-        Rapport rapport = new Rapport();
-        Log log = new Log(50);
+        ThreadEvenement te = new ThreadEvenement();
+        te.start();
         
+        Log log = new Log(50);
+        Rapport rapport = new Rapport();
         Support support = new Support();
         GenerateurBillet generateurBillet = new GenerateurBillet();
         

@@ -23,7 +23,7 @@ public class Log implements Observateur {
 
     @Override
     public void alerter(Evenement evenement) {
-       if(NOLOG >= 90){
+       if(NOLOG >= 50){
            System.out.println("LOG : Evènement(" 
                    + evenement.toString() + ")");
        }

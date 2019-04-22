@@ -15,11 +15,12 @@ public class CommandeChangementArme implements Commande{
 
     @Override
     public void executer(Acteur acteur) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        acteur.changerArme();
     }
     
-    public String toSting(){
-        return null;
+    @Override
+    public String toString(){
+        return "CHANGEMENT_ARME";
     }
     
 }

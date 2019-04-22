@@ -15,11 +15,11 @@ public class CommandeEsquive implements Commande{
 
     @Override
     public void executer(Acteur acteur) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        acteur.esquiver();    }
     
-    public String toSting(){
-        return null;
+    @Override
+    public String toString(){
+        return "ESQUIVER";
     }
     
 }

@@ -26,7 +26,6 @@ public class Main {
         Random rand = new Random();
         ServeurMV serveurMV = new ServeurVMWare();
 
-        /*
         System.out.println("Tentative de connexion avant l'ouverture du serveur");
         try {
             Thread.sleep(2000);
@@ -69,7 +68,6 @@ public class Main {
         catch (SessionException se){
             se.printStackTrace();
         }
-        */
 
     }
 }
